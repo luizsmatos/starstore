@@ -2,6 +2,7 @@ import z from 'zod'
 
 const envSchema = z.object({
   SALT: z.string().default('salt'),
+  JWT_SECRET: z.string().default('secret'),
 })
 
 const _env = envSchema.safeParse(process.env)
